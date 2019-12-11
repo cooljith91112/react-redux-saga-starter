@@ -7,7 +7,7 @@ export const CustomRouter = ({ xComponent: Component, ...xProps }) => {
       <Route
         {...xProps}
         render={props => {
-            console.log(props.permissions)
+          let returnProps = {...xProps, ...props};
           let token = Storage.get("token");
           let pathName = props.match.path;
           if (!token && pathName !== "/login") {
@@ -19,8 +19,7 @@ export const CustomRouter = ({ xComponent: Component, ...xProps }) => {
   
             return <Redirect to="/dashboard" />;
           }
-          debugger
-          return <Component {...props} />;
+          return <Component {...returnProps} />;
         }}
       />
     );
