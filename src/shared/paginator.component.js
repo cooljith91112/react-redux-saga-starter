@@ -13,15 +13,21 @@ const Paginator = (props) => {
     }
 
     const onPrevious = ()=>{
-        props.previousPage();
+        if(props.previousPage){
+            props.previousPage();            
+        } 
     }
 
     const onNext = ()=>{
-        props.nextPage();
+        if(props.nextPage){
+            props.nextPage();            
+        }
     }
 
     const onPageClick = (pageNum)=>{
-        props.goToNextPage(pageNum)
+        if(props.goToNextPage){
+            props.goToNextPage(pageNum);            
+        }
     }
 
 
@@ -29,18 +35,18 @@ const Paginator = (props) => {
         <nav>
             <ul className="pagination">
                 <li className={previousItemStyle}>
-                    <a className="page-link" href="javascript:void(0)" onClick={onPrevious}>Previous</a>
+                    <a className="page-link" href="#!" onClick={onPrevious}>Previous</a>
                 </li>
 
                 {pages.map(_page=>{
                     return(
                         <li key={_page} className={_page==currentPage ? "page-item active" : "page-item"}>
-                            <a className="page-link" href="javascript:void(0)" onClick={onPageClick.bind(this, _page)}>{_page}</a>
+                            <a className="page-link" href="#!" onClick={onPageClick.bind(this, _page)}>{_page}</a>
                         </li>
                     )
                 })}
                 <li className={nextItemStyle}>
-                    <a className="page-link" href="#" onClick={onNext}>Next</a>
+                    <a className="page-link" href="#!" onClick={onNext}>Next</a>
                 </li>
             </ul>
         </nav>
