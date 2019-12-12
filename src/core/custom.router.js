@@ -1,6 +1,8 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import Storage from "../services/storage.service";
+import Permissions from "./permission.router";
+import { RandomKey } from "../utils/random.key";
 
 export const CustomRouter = ({ xComponent: Component, ...xProps }) => {
     return (
@@ -19,7 +21,7 @@ export const CustomRouter = ({ xComponent: Component, ...xProps }) => {
   
             return <Redirect to="/dashboard" />;
           }
-          return <Component {...returnProps} />;
+          return <Permissions {...returnProps} key={RandomKey.generate()} Component={Component}/>;
         }}
       />
     );

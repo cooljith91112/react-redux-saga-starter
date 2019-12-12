@@ -9,7 +9,8 @@ class Storage{
         if(!key||!value){
             throw("Storag.set expects a 'key' and a 'value' - 'value' & 'key' can't be null");            
         }
-        localStorage.setItem(key, JSON.stringify(value));
+        value = (typeof value=="string") ?  value : JSON.stringify(value);
+        localStorage.setItem(key, value);
     }
 }
 

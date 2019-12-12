@@ -11,6 +11,7 @@ import {
     Route
   } from "react-router-dom";
 import Routes from './core/routes';
+import HttpService from './services/http.service';
 
 require("es6-promise").polyfill();
 
@@ -18,6 +19,9 @@ require("es6-promise").polyfill();
 
 const store = configureStore();
 store.runSaga(rootMiddleware);
+HttpService.reduxStore = store;
+HttpService.httpInterceptor();
+// console.log(HttpService.httpInterceptor)
 
 const XRouter = () => {
     return (

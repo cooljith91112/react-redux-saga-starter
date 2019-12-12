@@ -1,0 +1,6 @@
+.sidebar{
+    background: #cccc;
+    width: 92px;
+    height: calc(100vh);
+    position: absolute;
+}
