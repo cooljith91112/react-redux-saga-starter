@@ -5,5 +5,5 @@ export const loginMock = (params)=>{
         url: 'https://reqres.in/api/login',
         method: 'post',
         data: params
-    });
+    }, true);
 }
