@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
-import { Provider, connect } from "react-redux";
+import { Provider } from "react-redux";
 import { ConnectedRouter } from "connected-react-router";
-import { Switch, Redirect, Route, withRouter } from "react-router-dom";
+import { Switch, Redirect } from "react-router-dom";
 import { CustomRouter } from "./custom.router";
 import LoginContainer from "../modules/login/login.container";
 import DashBoardContainer from "../modules/dashboard/dashboard.container";

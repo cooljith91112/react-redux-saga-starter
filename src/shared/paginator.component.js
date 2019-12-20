@@ -40,7 +40,7 @@ const Paginator = (props) => {
 
                 {pages.map(_page=>{
                     return(
-                        <li key={_page} className={_page==currentPage ? "page-item active" : "page-item"}>
+                        <li key={_page} className={_page===currentPage ? "page-item active" : "page-item"}>
                             <a className="page-link" href="#!" onClick={onPageClick.bind(this, _page)}>{_page}</a>
                         </li>
                     )

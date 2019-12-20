@@ -21,7 +21,7 @@ class HttpServiceSingleton {
         if (!noAuth) {
             let token = Storage.get("token");
             config.headers = {
-                'Authirization': `Bearer ${token}`
+                'Authorization': `Bearer ${token}`
             };
         }
 
@@ -72,7 +72,7 @@ class HttpServiceSingleton {
 
     //Fallback to cancel all API loaders in case of multiple API call occuts
     checkApiComplete(store) {
-        if (this.count == this.complete) { // Cancel API loader when all requests are completed
+        if (this.count === this.complete) { // Cancel API loader when all requests are completed
             store.dispatch({
                 type: COMMON_SUCCESS
             });

@@ -1,5 +1,5 @@
 import { put, call, fork, takeEvery } from "redux-saga/effects";
-import { LOGIN_REQUEST, LOGIN_SUCCESS } from "../utils/constants";
+import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILED } from "../utils/constants";
 import { loginMock } from "../modules/login/login.service";
 import { history } from '../core/store';
 function* loginWatcher() {
@@ -18,6 +18,11 @@ function* loginWorker(action) {
             }
         });
         history.push('/dashboard');
+    }else{
+        yield put({
+            type: LOGIN_FAILED,
+            
+        });
     }
     console.log(res);
 }

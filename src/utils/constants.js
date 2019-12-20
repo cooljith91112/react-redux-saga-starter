@@ -1,5 +1,6 @@
 export const LOGIN_REQUEST = "LOGIN_REQUEST";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAILED = "LOGIN_FAILED";
 export const COMMON_REQUEST =  "COMMON_REQUEST";
 export const COMMON_SUCCESS =  "COMMON_SUCCESS";
 export const COMMON_CANCEL =  "COMMON_CANCEL";
