@@ -1,23 +1,136 @@
+html,
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  font-size: 0.9em;
 }
 
-
-html, body { 
-  margin:0; 
-  padding:0; 
-  height:100%; 
+.top-header {
+  height: 60px;
 }
 
-.container-fluid{
+.left_menu {
+  background-color: #202646;
+  // height:100%;
+  width: 50px;
+  text-align: center;
+}
+
+.maincontent_area {
+  width: calc(100% - 50px);
+  height: calc(100vh - 60px);
+  padding: 15px;
+  overflow: auto;
+  background-color: #f9f9f9;
+}
+
+.content_area {
+  height: calc(100% - 60px);
+}
+
+.full-height {
   height: 100%;
 }
 
-.content{
-  margin-left: 92px;  
+.chart-block {
+  height: 250px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 3px 2px #eee;
+  box-shadow: 0 0 3px 2px #eee;
+  padding: 10px;
+}
+
+.expand-collapse-action-area {
+  text-align: right;
+  padding: 15px;
+
+}
+
+.expand-collapse-action-area i {
+  color: #a697ea;
+  font-size: 18px;
+}
+
+.filter-area {}
+
+.table-wrapper {
+  border: solid 1px #ddd;
+}
+
+.table-wrapper table {
+  width: 100%;
+  table-layout: fixed;
+
+}
+
+.table-wrapper table th {
+  border-bottom: solid 1px #ddd;
+  background-color: #f3f3f3;
+  padding: s 5px;
+}
+
+.table-wrapper table td {
+  background-color: #fff;
+  padding: 5px;
+  border-bottom: solid 1px #ddd;
+  line-height: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-round-icon {
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.background_text {
+  padding: 0px 5px;
+  background-color: #eee;
+}
+
+.medium_status {
+  background-color: #f2d090 !important;
+}
+
+.high_status {
+  background-color: #ff6179 !important;
+}
+
+.new_status {
+  background-color: #7fc31e !important;
+}
+
+.assigned_status {
+  background-color: #aaceee !important;
+}
+
+.background_text {
+  padding: 0px 5px;
+  background-color: #eee;
+}
+
+.search_area {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center; */
+  text-align: right;
+}
+
+.search_area button {
+  background-color: #fff;
+  border: solid 1px #83b1c1;
+  color: #83b1c1;
+}
+
+.left_menu i {
+  color: #fff;
+  font-size: 22px;
 }

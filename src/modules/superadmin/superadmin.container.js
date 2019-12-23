@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import WithHeaderFooter from '../../shared/header_footer.hoc';
-import WithSidebar from '../../shared/sidebar.hoc';
+import WithLayout from '../../shared/layout.hoc';
 import { COMMON_REQUEST } from '../../utils/constants';
 import HttpService from '../../services/http.service';
 const SuperAdminContainer = (props) => {
@@ -26,7 +26,7 @@ const SuperAdminContainer = (props) => {
     }
 
     return (
-        <div className="container-fluid">
+        <div className="maincontent_area">
             <div className="row">
                 <div className="col-md-12">
                     SuperAdminContainer
@@ -47,5 +47,5 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps)(
-    WithSidebar(WithHeaderFooter(SuperAdminContainer))
+    WithLayout(SuperAdminContainer)
 );

@@ -16,9 +16,6 @@ const HeaderFooter = (HocComponent) => {
                         <Link className="nav-link" to={"/login"} >Login</Link>
                     </nav>
                     <HocComponent {...this.props} />
-                    <footer className="footer">
-                        <div className="container">Footer</div>
-                    </footer>
                 </React.Fragment>
             );
         }

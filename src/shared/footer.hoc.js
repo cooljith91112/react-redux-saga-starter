@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { compose } from "redux";
-import './footer.css';
+import './footer.scss';
 
 const Footer = (HocComponent) => {
     return class FooterComponent extends Component {
