@@ -24,5 +24,5 @@ const mapStateToProps = state => {
 
 
 export default connect(mapStateToProps)(
-    WithSidebar(WithHeaderFooter(AdminContainer))
+    WithHeaderFooter(WithSidebar(AdminContainer))
 );
